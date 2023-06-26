@@ -1,0 +1,86 @@
+
+
+:root{
+
+    --hue:200;
+    --saturation:50%;
+    --foreground-color:#b9a0d8;
+    --background-color:#464647 ;
+
+
+}
+
+
+body{
+    margin:0;
+    background-color:var(--background-color);
+
+}
+
+
+
+
+.paddle{
+
+--position:50;
+
+position: absolute;
+background-color: var(--foreground-color);
+top:calc(var(--position)*1vh);
+transform: translateY(-50%);
+width: 1vh;
+height: 10vh;
+}
+
+
+.paddle.left{
+
+left:1vw;
+
+}
+
+.paddle.right{
+
+right:1vw;
+}
+
+
+.ball{
+
+--x:50;
+--y:50;
+
+position: absolute;
+background-color: var(--foreground-color);
+left:calc(var(--x)*1vw);
+top:calc(var(--y)*1vh);
+transform: translate(-50%,-50%);
+
+border-radius: 50%;
+width: 2.5vh;
+height: 2.5vh;
+}
+
+
+.score{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 7vh;
+    color: var(--foreground-color);
+    padding-top: 40px;
+    text-align: center;
+}
+
+#playerScore{
+
+
+padding-right: 100px;
+border-right: .5vh solid var(--foreground-color);
+}
+
+#computerScore{
+
+    
+    padding-left: 100px;
+}
